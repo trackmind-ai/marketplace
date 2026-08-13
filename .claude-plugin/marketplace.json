@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "trackmind",
+  "owner": { "name": "Trackmind", "email": "oss@trackmind.com" },
+  "description": "Trackmind's open-source Claude Code plugins.",
+  "plugins": [
+    {
+      "name": "mcp-rubriq",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/trackmind-ai/mcp-rubriq.git",
+        "path": "plugins/mcp-rubriq",
+        "ref": "main"
+      },
+      "description": "Grades MCP (Model Context Protocol) servers against a published 28-rule quality rubric.",
+      "author": { "name": "Trackmind", "email": "oss@trackmind.com" },
+      "homepage": "https://github.com/trackmind-ai/mcp-rubriq",
+      "repository": "https://github.com/trackmind-ai/mcp-rubriq",
+      "license": "MIT",
+      "category": "quality",
+      "keywords": ["mcp", "rubric", "linter", "model-context-protocol", "quality", "security"]
+    }
+  ],
+  "renames": {
+    "mcplint": "mcp-rubriq"
+  }
+}

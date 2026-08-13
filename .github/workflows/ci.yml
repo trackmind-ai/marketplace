@@ -1,0 +1,42 @@
+---
+# SPDX-FileCopyrightText: 2026 Trackmind
+# SPDX-License-Identifier: MIT
+name: CI
+
+# Quoted deliberately. YAML 1.1 resolves a bare `on` to the boolean true, so the
+# key becomes True rather than "on". GitHub's own parser copes, but editors and
+# linters flag it and report the error at a confusing position.
+"on":
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  # The catalog can break with no commit at all: a listed repo goes private, a
+  # pinned tag is deleted. A weekly run catches that before a user does.
+  schedule:
+    - cron: "17 6 * * 1"
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate manifest
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # Shape plus the rules that only bite after publishing: reserved marketplace
+      # names, bad source fields, dangling renames, README drift. No network, so
+      # this step cannot be flaky.
+      - name: Validate manifest
+        run: python scripts/validate_marketplace.py
+
+      # Network: every listed repo is reachable and every pinned ref resolves.
+      - name: Verify plugin sources resolve
+        run: python scripts/validate_marketplace.py --check-sources

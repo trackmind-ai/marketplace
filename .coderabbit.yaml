@@ -1,0 +1,47 @@
+# SPDX-FileCopyrightText: 2026 Trackmind
+# SPDX-License-Identifier: MIT
+#
+# CodeRabbit config for the catalog repo. This repo ships no application code, so the
+# review that matters is narrow: a change to marketplace.json changes what code
+# `/plugin install` puts on a user's machine. The instructions below mirror the review
+# rules in SECURITY.md so an automated pass and a human pass check the same things.
+
+language: en-US
+
+reviews:
+  profile: chill
+  request_changes_workflow: false
+  high_level_summary: true
+  poem: false
+  review_status: true
+  auto_review:
+    enabled: true
+    drafts: false
+
+  path_instructions:
+    - path: ".claude-plugin/marketplace.json"
+      instructions: >
+        This manifest decides which repositories `/plugin install` fetches onto a user's
+        machine, so treat every change to it as a supply-chain change, not a config tweak.
+        Check, and say so explicitly rather than only noting style:
+        (1) every plugin `source` points at a repository under the `trackmind-ai` owner —
+        flag any source pointing elsewhere as requiring a deliberate decision;
+        (2) the `repo`/`url` plausibly hosts the plugin the entry claims to describe, and
+        call out a name that merely looks close to a real one;
+        (3) a git source without a `ref` or `sha` pin means users track a moving branch —
+        acceptable for a pre-1.0 plugin, but flag it on anything described as released;
+        (4) a change to an existing plugin's `name` breaks every install that references
+        it, so it must be accompanied by a `renames` entry mapping the old name to the
+        new one (or to null if removed) — flag a bare rename as a defect.
+
+    - path: "scripts/validate_marketplace.py"
+      instructions: >
+        This is the gate CI runs before a catalog change can merge. A weakened check here
+        silently widens what the manifest is allowed to contain, so review changes to it
+        as security-relevant: flag any relaxation of the reserved-name list, the
+        source-field requirements per type, the `renames` target check, or the reachability
+        check, and confirm that a new check fails closed (non-zero exit) rather than
+        warning only.
+
+chat:
+  auto_reply: true
