@@ -19,6 +19,22 @@
       "license": "MIT",
       "category": "quality",
       "keywords": ["mcp", "rubric", "linter", "model-context-protocol", "quality", "security"]
+    },
+    {
+      "name": "agentic-foundry",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/trackmind-ai/AgenticFoundry.git",
+        "path": "plugins/agentic-foundry",
+        "ref": "v0.1.0"
+      },
+      "description": "Agent-driven SDLC platform: governed pipelines from requirement to production-ready code.",
+      "author": { "name": "Trackmind", "email": "oss@trackmind.com" },
+      "homepage": "https://github.com/trackmind-ai/AgenticFoundry",
+      "repository": "https://github.com/trackmind-ai/AgenticFoundry",
+      "license": "MIT",
+      "category": "workflow",
+      "keywords": ["sdlc", "agents", "pipeline", "quality-gates", "specifications", "code-review"]
     }
   ],
   "renames": {

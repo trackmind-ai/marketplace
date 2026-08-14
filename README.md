@@ -35,6 +35,7 @@ harmless; it's idempotent.
 | Plugin | What it does | Repository |
 |---|---|---|
 | **[mcp-rubriq](https://github.com/trackmind-ai/mcp-rubriq)** | Grades MCP (Model Context Protocol) servers against a published 28-rule quality rubric. | `trackmind-ai/mcp-rubriq` |
+| **[agentic-foundry](https://github.com/trackmind-ai/AgenticFoundry)** | Agent-driven SDLC platform: governed pipelines from requirement to production-ready code. | `trackmind-ai/AgenticFoundry` |
 
 ## Why one marketplace instead of one per plugin
 
