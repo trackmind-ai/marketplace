@@ -19,6 +19,22 @@
       "license": "MIT",
       "category": "quality",
       "keywords": ["mcp", "rubric", "linter", "model-context-protocol", "quality", "security"]
+    },
+    {
+      "name": "automaqa",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/trackmind-ai/AutomaQA.git",
+        "path": "plugins/automaqa",
+        "ref": "main"
+      },
+      "description": "Installs and verifies a complete E2E toolchain (Playwright for web, Maestro for mobile), then drives spec-driven test authoring, live verification, and versioned HTML reporting.",
+      "author": { "name": "Trackmind", "email": "oss@trackmind.com" },
+      "homepage": "https://github.com/trackmind-ai/AutomaQA",
+      "repository": "https://github.com/trackmind-ai/AutomaQA",
+      "license": "MIT",
+      "category": "testing",
+      "keywords": ["playwright", "maestro", "e2e", "testing", "automation", "mobile", "web", "qa"]
     }
   ],
   "renames": {
