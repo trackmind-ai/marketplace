@@ -35,6 +35,7 @@ harmless; it's idempotent.
 | Plugin | What it does | Repository |
 |---|---|---|
 | **[mcp-rubriq](https://github.com/trackmind-ai/mcp-rubriq)** | Grades MCP (Model Context Protocol) servers against a published 28-rule quality rubric. | `trackmind-ai/mcp-rubriq` |
+| **[automaqa](https://github.com/trackmind-ai/AutomaQA)** | Installs and verifies a complete E2E toolchain (Playwright for web, Maestro for mobile), then drives spec-driven test authoring, live verification, and versioned HTML reporting. | `trackmind-ai/AutomaQA` |
 
 ## Why one marketplace instead of one per plugin
 
