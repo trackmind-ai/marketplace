@@ -35,6 +35,22 @@
       "license": "MIT",
       "category": "testing",
       "keywords": ["playwright", "maestro", "e2e", "testing", "automation", "mobile", "web", "qa"]
+    },
+        {
+      "name": "sdlc-atlas",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/trackmind-ai/sdlc-atlas.git",
+        "path": "plugins/sdlc-atlas",
+        "ref": "main"
+      },
+      "description": "Agent-driven SDLC platform. Takes a requirement to production-ready code through governed pipelines: versioned specs, approval gates, and ordered quality gates across a four-layer capability model (platform, stacks, organization, project).",
+      "author": { "name": "Trackmind", "email": "oss@trackmind.com" },
+      "homepage": "https://github.com/trackmind-ai/sdlc-atlas",
+      "repository": "https://github.com/trackmind-ai/sdlc-atlas",
+      "license": "MIT",
+      "category": "development",
+      "keywords": ["sdlc", "agents", "pipeline", "quality-gates", "specifications", "code-review", "scaffolding"]
     }
   ],
   "renames": {
