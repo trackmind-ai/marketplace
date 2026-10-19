@@ -24,14 +24,14 @@
       "name": "automaqa",
       "source": {
         "source": "git-subdir",
-        "url": "https://github.com/trackmind-ai/AutomaQA.git",
+        "url": "https://github.com/trackmind-ai/automa-qa.git",
         "path": "plugins/automaqa",
         "ref": "main"
       },
       "description": "Installs and verifies a complete E2E toolchain (Playwright for web, Maestro for mobile), then drives spec-driven test authoring, live verification, and versioned HTML reporting.",
       "author": { "name": "Trackmind", "email": "oss@trackmind.com" },
-      "homepage": "https://github.com/trackmind-ai/AutomaQA",
-      "repository": "https://github.com/trackmind-ai/AutomaQA",
+      "homepage": "https://github.com/trackmind-ai/automa-qa",
+      "repository": "https://github.com/trackmind-ai/automa-qa",
       "license": "MIT",
       "category": "testing",
       "keywords": ["playwright", "maestro", "e2e", "testing", "automation", "mobile", "web", "qa"]
