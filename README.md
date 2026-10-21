@@ -37,6 +37,7 @@ harmless; it's idempotent.
 | **[mcp-rubriq](https://github.com/trackmind-ai/mcp-rubriq)** | Grades MCP (Model Context Protocol) servers against a published 28-rule quality rubric. | `trackmind-ai/mcp-rubriq` |
 | **[automaqa](https://github.com/trackmind-ai/automa-qa)** | Installs and verifies a complete E2E toolchain (Playwright for web, Maestro for mobile), then drives spec-driven test authoring, live verification, and versioned HTML reporting. | `trackmind-ai/automa-qa` |
 | **[sdlc-atlas](https://github.com/trackmind-ai/sdlc-atlas)** | Agent-driven SDLC platform: versioned specs, approval gates, and ordered quality gates from requirement to production code. | `trackmind-ai/sdlc-atlas` |
+| **[security-review-speckit](https://github.com/trackmind-ai/security-review-speckit)** | Structured, evidence-based security reviews (SAST, SCA, authorization, XSS, supply-chain, AI/LLM) with exact evidence and remediation. Read-only by default. | `trackmind-ai/security-review-speckit` |
 
 
 ## Why one marketplace instead of one per plugin
