@@ -105,8 +105,8 @@ class TestAutomaqaEntry:
             assert field in automaqa_entry, f"missing {field!r}"
 
     def test_name_is_kebab_case(self, automaqa_entry: dict) -> None:
-        # The upstream repo is "AutomaQA" (mixed case); the catalog entry must
-        # still be lowercase kebab-case regardless of the repo's own casing.
+        # The upstream repo is "automa-qa"; the catalog entry must
+        # still be lowercase kebab-case regardless of the repo name.
         assert KEBAB.match(automaqa_entry["name"])
 
     def test_name_matches_kebab_regex_from_validator(self, automaqa_entry: dict) -> None:
@@ -127,7 +127,7 @@ class TestAutomaqaEntry:
         assert automaqa_entry["author"] == {"name": "Trackmind", "email": "oss@trackmind.com"}
 
     def test_homepage_and_repository_point_at_automaqa_repo(self, automaqa_entry: dict) -> None:
-        expected = "https://github.com/trackmind-ai/AutomaQA"
+        expected = "https://github.com/trackmind-ai/automa-qa"
         assert automaqa_entry["homepage"] == expected
         assert automaqa_entry["repository"] == expected
 
@@ -157,7 +157,7 @@ class TestAutomaqaSource:
         assert automaqa_entry["source"]["source"] == "git-subdir"
 
     def test_source_url_targets_automaqa_git_repo(self, automaqa_entry: dict) -> None:
-        assert automaqa_entry["source"]["url"] == "https://github.com/trackmind-ai/AutomaQA.git"
+        assert automaqa_entry["source"]["url"] == "https://github.com/trackmind-ai/automa-qa.git"
 
     def test_source_path_points_at_plugin_subdirectory(self, automaqa_entry: dict) -> None:
         assert automaqa_entry["source"]["path"] == "plugins/automaqa"
@@ -228,7 +228,7 @@ class TestReadmeAgreesWithManifest:
         assert len(cells) == 3, f"expected a 3-column table row, got {cells!r}"
         _plugin_cell, description_cell, repo_cell = cells
         assert description_cell == automaqa_entry["description"]
-        assert repo_cell == "`trackmind-ai/AutomaQA`"
+        assert repo_cell == "`trackmind-ai/automa-qa`"
 
     @staticmethod
     def _find_row(readme_text: str) -> str | None:
