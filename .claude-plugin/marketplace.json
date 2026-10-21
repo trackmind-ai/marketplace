@@ -51,6 +51,21 @@
       "license": "MIT",
       "category": "development",
       "keywords": ["sdlc", "agents", "pipeline", "quality-gates", "specifications", "code-review", "scaffolding"]
+    },
+    {
+      "name": "spec-security-review",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/trackmind-ai/spec-security-review.git",
+        "ref": "main"
+      },
+      "description": "Structured, evidence-based security reviews: SAST, SCA, authorization, XSS, supply-chain and AI/LLM tracks, with exact files, lines, impact and remediation. Read-only by default.",
+      "author": { "name": "Trackmind", "email": "oss@trackmind.com" },
+      "homepage": "https://github.com/trackmind-ai/spec-security-review",
+      "repository": "https://github.com/trackmind-ai/spec-security-review",
+      "license": "MIT",
+      "category": "security",
+      "keywords": ["security", "sast", "sca", "owasp", "code-review", "xss", "supply-chain", "llm-security"]
     }
   ],
   "renames": {
