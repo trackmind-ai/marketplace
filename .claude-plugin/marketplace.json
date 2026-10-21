@@ -53,7 +53,7 @@
       "keywords": ["sdlc", "agents", "pipeline", "quality-gates", "specifications", "code-review", "scaffolding"]
     },
     {
-      "name": "security-review-speckit",
+      "name": "spec-security-review",
       "source": {
         "source": "url",
         "url": "https://github.com/trackmind-ai/security-review-speckit.git",
