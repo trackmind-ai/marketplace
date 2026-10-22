@@ -80,4 +80,5 @@ review rules and how to report a problem.
 ## License
 
 MIT — see [`LICENSE`](LICENSE). This covers the manifest and this repo's own files. Each listed
-plugin is licensed separately in its own repository.
+plugin is licensed separately in its own repository: mcp-rubriq and spec-security-review
+use GPL-3.0-or-later, automaqa and sdlc-atlas use MIT.
