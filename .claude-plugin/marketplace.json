@@ -16,7 +16,7 @@
       "author": { "name": "Trackmind", "email": "oss@trackmind.com" },
       "homepage": "https://github.com/trackmind-ai/mcp-rubriq",
       "repository": "https://github.com/trackmind-ai/mcp-rubriq",
-      "license": "MIT",
+      "license": "GPL-3.0-or-later",
       "category": "quality",
       "keywords": ["mcp", "rubric", "linter", "model-context-protocol", "quality", "security"]
     },
@@ -63,7 +63,7 @@
       "author": { "name": "Trackmind", "email": "oss@trackmind.com" },
       "homepage": "https://github.com/trackmind-ai/spec-security-review",
       "repository": "https://github.com/trackmind-ai/spec-security-review",
-      "license": "MIT",
+      "license": "GPL-3.0-or-later",
       "category": "security",
       "keywords": ["security", "sast", "sca", "owasp", "code-review", "xss", "supply-chain", "llm-security"]
     }
